@@ -56,6 +56,6 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 
 TOOLS:
 
-- Fuentes: https://fontsource.org/
-- Some components: https://flowbite.com/
-- Gradient background: [text](https://bg.ibelick.com/)
+- [Fuentes](https://fontsource.org/)
+- [Some components](https://flowbite.com/)
+- [Gradient background](https://bg.ibelick.com/)
