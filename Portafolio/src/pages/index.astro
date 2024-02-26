@@ -1,9 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro'
+import Badge from '../components/Badge.astro';
+import GithubIcon from '../components/icons/Github.astro';
+import LinkedinIcon from '../components/icons/Linkedin.astro';
+import SocialPill from '../components/SocialPill.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Ing. Jose Sissa">
 	<main>
 		<section class="w-full lg:w-[740px] mx-auto py-44">
 			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
@@ -12,9 +15,23 @@ import Badge from '../components/Badge.astro'
 					<Badge>Disponible</Badge>
 				</div>
 			</h1>
-			<h2 class="text-xl opacity-80">
-				+2 años de experiencia. Ingeniero de Sistemas. De Colombia.
+			<h2 class="text-2xl opacity-80 text-wrap">
+				+2 años de experiencia.
+				<span class="text-yellow-200">Ingeniero de Sistemas - Desarrollador Web.</span>
+				De Cúcuta - Colombia.
 			</h2>
+
+			<nav class="flex items-center gap-x-4 mt-6">
+				<SocialPill href="https://www.linkedin.com/in/josesissamendoza/">
+					<LinkedinIcon class="w-6 h-6" />
+					LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/JoseSissa">
+					<GithubIcon class="w-6 h-6" />
+					Github
+				</SocialPill>
+			</nav>
+
 		</section>
 	</main>
 </Layout>

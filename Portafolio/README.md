@@ -54,8 +54,10 @@ All commands are run from the root of the project, from a terminal:
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 
 
-TOOLS:
+## TOOLS:
 
 - [Fuentes](https://fontsource.org/)
 - [Some components](https://flowbite.com/)
 - [Gradient background](https://bg.ibelick.com/)
+- [Icons](https://svgl.vercel.app/)
+- [Icons - Option](https://tabler.io/icons)
