@@ -11,56 +11,89 @@ import Experience from '../components/Experience.astro';
 	title="Portafolio de Jose Sissa - Desarrollador y Programador Web" 
 	description="Ingeniero de Sistemas, Desarrollador y Programador Web con enfoque en el desarrollo Frontend."
 >
-	<main>
-		<section class="w-full lg:w-[780px] h-screen flex items-center justify-center mx-auto">
-			<div>
+	<div>
+		<div class="lg:flex w-full max-w-screen-xl mx-auto min-h-screen px-6 py-12 lg:px-24 lg:py-0">
+			<header class="lg:sticky lg:top-0 lg:max-h-screen lg:w-1/2 lg:flex lg:justify-between lg:flex-col lg:py-24">
 				<div>
-					<img class="max-w-xs" src="/public/favicon.svg" alt="Favicon logo reemplazo">
-				</div>
-				<div>
-					<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
-						Hey, soy José Sissa
+					<h1 class="text-4xl sm:text-5xl font-bold">
+						Jose Sissa
+						<!-- <div class="flex justify-center items-center">
+							<Badge>Disponible</Badge>
+						</div> -->
 					</h1>
-					<h2 class="text-2xl opacity-80 text-wrap">
-						+2 años de experiencia.
-						<span class="text-yellow-200">Ingeniero de Sistemas - Desarrollador Web.</span>
-						De Cúcuta - Colombia.
+					<h2 class="sm:text-xl font-medium">
+						Ingeniero de Sistemas <br>Desarrollador Web
 					</h2>
 				</div>
-			</div>
-		</section>
 
-		<section class="w-full max-w-7xl mx-auto py-44">
-			<div>
-				<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
-					Hey, soy José Sissa
-					<div class="flex justify-center items-center">
-						<Badge>Disponible</Badge>
+				<ul class="flex items-center">
+					<li>
+						<SocialPill href="https://www.linkedin.com/in/josesissamendoza/">
+							<LinkedinIcon class="size-6" />
+						</SocialPill>
+					</li>
+					<li>
+						<SocialPill href="https://github.com/JoseSissa">
+							<GithubIcon class="size-6" />
+						</SocialPill>
+					</li>
+				</ul>
+			</header>
+
+			<main class="lg:w-1/2 lg:py-24">
+				<!-- <section>
+					<h2>Experiencia</h2>
+					<div>
+						<ol>
+							<li>
+								<div>
+									<header>
+										2021 - Presente
+									</header>
+									<div>
+										<h3>Cargo</h3>
+										<p>Explicación del Cargo</p>
+										<ul>
+											<li>
+												<div>HTML</div>
+											</li>
+											<li>
+												<div>CSS</div>
+											</li>
+											<li>
+												<div>JavaScript</div>
+											</li>
+											<li>
+												<div>React</div>
+											</li>
+											<li>
+												<div>SCSS</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ol>
 					</div>
-				</h1>
-				<h2 class="text-2xl opacity-80 text-wrap">
-					+2 años de experiencia.
-					<span class="text-yellow-200">Ingeniero de Sistemas - Desarrollador Web.</span>
-					De Cúcuta - Colombia.
-				</h2>
-	
-				<nav class="flex items-center gap-x-4 mt-6">
-					<SocialPill href="https://www.linkedin.com/in/josesissamendoza/">
-						<LinkedinIcon class="size-6" />
-						LinkedIn
-					</SocialPill>
-					<SocialPill href="https://github.com/JoseSissa">
-						<GithubIcon class="size-6" />
-						Github
-					</SocialPill>
-				</nav>
-			</div>
+				</section>
 
-			<div>
-				<h3>Experiencia</h3>
-				<Experience />
-			</div>
+				<section>
+					<p>
+						Back in 2012, I decided to try my hand at creating custom Tumblr themes and tumbled head first into the rabbit hole of coding and web development. Fast-forward to today, and I’ve had the privilege of building software for an advertising agency, a start-up, a student-led design studio, and a huge corporation.
+					</p>
+					<p>
+						My main focus these days is building products and leading projects for our clients at Upstatement. I most enjoy building software in the sweet spot where design and engineering meet — things that look good but are also built well under the hood. In my free time, I've also released an online video course that covers everything you need to know to build a web app with the Spotify API.
+					</p>
+					<p>
+						When I’m not at the computer, I’m usually rock climbing, reading, hanging out with my wife and two cats, or running around Hyrule searching for Korok seeds.
+					</p>
+				</section>
+				<div>
+					<h3>Experiencia</h3>
+					<Experience />
+				</div> -->
+			</main>
 
-		</section>
-	</main>
+		</div>
+	</div>
 </Layout>
