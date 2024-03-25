@@ -1,39 +1,32 @@
 ---
-const EXPERIENCE_JOBS = [
-	{
-		fecha: '2022 - Presente',
-		empresa: 'Gravital',
-		cargo: 'Desarrollador Frontend',
-		explicacion_cargo: 'Desarrollador Frontend que se enfocaba en trabajar en Novita Diamonds.',
-		tecnologias: ['HTML', 'CSS', 'JavaScript']
-	}
-]
-
+import { EXPERIENCE_JOBS } from '../constants/experiencia'
 ---
-
-<div>
-    <ol>
-        {
-            EXPERIENCE_JOBS.map((job, index) => {
-                return(
-                    <li>
-                        <div>
-                            <header>{job.fecha}</header>
+<section>
+    <h2>Experiencia</h2>
+    <div>
+        <ol>
+            {
+                EXPERIENCE_JOBS.map((job, index) => {
+                    return(
+                        <li>
                             <div>
-                                <h3>{job.cargo}</h3>
-                                <p>{job.explicacion_cargo}</p>
-                                <ul>
-                                    {
-                                        job.tecnologias.map((tecnologia, i) => (
-                                            <li>{tecnologia}</li>
-                                        ))
-                                    }
-                                </ul>
+                                <header>{job.fecha}</header>
+                                <div>
+                                    <h3>{job.cargo}</h3>
+                                    <p>{job.explicacion_cargo}</p>
+                                    <ul>
+                                        {
+                                            job.tecnologias.map((tecnologia, i) => (
+                                                <li>{tecnologia}</li>
+                                            ))
+                                        }
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                )
-            })
-        }
-    </ol>
-</div>
+                        </li>
+                    )
+                })
+            }
+        </ol>
+    </div>
+</section>
