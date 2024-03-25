@@ -1,15 +1,39 @@
-<article>
-    <div>
-        Fecha
-    </div>
-    <div>
-        <h4>Empresa</h4>
-        <span>Cargo</span>
-        <p>
-            I made from scratch a project using high performance technologies for a company dedicated to the banking sector including from the creation of a library of components based on a design system to the architecture of the application and integrations with microservices. 
-        </p>
-        <p>
-            I worked closely with clients to establish software specifications and integrate with their existing software to perform a complete migration to the current software.
-        </p>
-    </div>
-</article>
+---
+const EXPERIENCE_JOBS = [
+	{
+		fecha: '2022 - Presente',
+		empresa: 'Gravital',
+		cargo: 'Desarrollador Frontend',
+		explicacion_cargo: 'Desarrollador Frontend que se enfocaba en trabajar en Novita Diamonds.',
+		tecnologias: ['HTML', 'CSS', 'JavaScript']
+	}
+]
+
+---
+
+<div>
+    <ol>
+        {
+            EXPERIENCE_JOBS.map((job, index) => {
+                return(
+                    <li>
+                        <div>
+                            <header>{job.fecha}</header>
+                            <div>
+                                <h3>{job.cargo}</h3>
+                                <p>{job.explicacion_cargo}</p>
+                                <ul>
+                                    {
+                                        job.tecnologias.map((tecnologia, i) => (
+                                            <li>{tecnologia}</li>
+                                        ))
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                )
+            })
+        }
+    </ol>
+</div>
