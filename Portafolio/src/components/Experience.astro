@@ -1,32 +1,29 @@
 ---
 import { EXPERIENCE_JOBS } from '../constants/experiencia'
 ---
-<section>
-    <h2>Experiencia</h2>
-    <div>
-        <ol>
-            {
-                EXPERIENCE_JOBS.map((job, index) => {
-                    return(
-                        <li>
+<div>
+    <ol>
+        {
+            EXPERIENCE_JOBS.map((job, index) => {
+                return(
+                    <li class="mb-12">
+                        <div>
+                            <header class="mb-2 text-xs font-light">{job.fecha}</header>
                             <div>
-                                <header>{job.fecha}</header>
-                                <div>
-                                    <h3>{job.cargo}</h3>
-                                    <p>{job.explicacion_cargo}</p>
-                                    <ul>
-                                        {
-                                            job.tecnologias.map((tecnologia, i) => (
-                                                <li>{tecnologia}</li>
-                                            ))
-                                        }
-                                    </ul>
-                                </div>
+                                <h3 class="mb-2 font-bold">{job.cargo} en {job.empresa}</h3>
+                                <p class="mb-3 leading-5 font-light">{job.explicacion_cargo}</p>
+                                <ul class="flex flex-wrap">
+                                    {
+                                        job.tecnologias.map((tecnologia, i) => (
+                                            <li class="mr-2 mb-2 py-2 px-3 rounded-lg text-xs font-bold bg-[#ffd430] text-[#0e1013]">{tecnologia}</li>
+                                        ))
+                                    }
+                                </ul>
                             </div>
-                        </li>
-                    )
-                })
-            }
-        </ol>
-    </div>
-</section>
+                        </div>
+                    </li>
+                )
+            })
+        }
+    </ol>
+</div>
