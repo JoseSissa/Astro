@@ -61,3 +61,4 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 - [Gradient background](https://bg.ibelick.com/)
 - [Icons](https://svgl.vercel.app/)
 - [Icons - Option](https://tabler.io/icons)
+- [Generate color palette](https://uicolors.app/create)

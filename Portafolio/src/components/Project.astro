@@ -1,0 +1,21 @@
+---
+import { PROJECTS } from '../constants/projects.js'
+import TitleSection from './TitleSection.astro'
+---
+
+<section>
+    <TitleSection>Proyectos</TitleSection>
+    {
+        PROJECTS.map((elem, index) => {
+            return (
+                    <h3>{elem.title}</h3>
+                    <p>{elem.description}</p>
+                    <div>
+                        <a href={elem.demo}>Ver</a>
+                        <a href={elem.code}>Código</a>
+                    </div>
+                    )
+                }
+            )
+    }
+</section>

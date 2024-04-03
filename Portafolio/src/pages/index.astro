@@ -6,7 +6,7 @@ import LinkedinIcon from '../components/icons/Linkedin.astro';
 import SocialPill from '../components/SocialPill.astro';
 import Experience from '../components/Experience.astro';
 import About from '../components/About.astro';
-import Proyecto from '../components/Proyecto.astro';
+import Project from '../components/Project.astro';
 import TitleSection from '../components/TitleSection.astro';
 ---
 
@@ -20,9 +20,9 @@ import TitleSection from '../components/TitleSection.astro';
 				<div class="mb-8 md:mb-0">
 					<h1 class="text-4xl sm:text-5xl font-bold mb-3">
 						Jose Sissa
-						<!-- <div class="flex justify-center items-center">
+						<div class="flex justify-center items-center">
 							<Badge>Disponible</Badge>
-						</div> -->
+						</div>
 					</h1>
 					<h2 class="sm:text-xl font-medium">
 						Ingeniero de Sistemas <br>Desarrollador Web
@@ -43,14 +43,10 @@ import TitleSection from '../components/TitleSection.astro';
 				</ul>
 			</header>
 
-			<main class="lg:w-1/2 lg:py-24">
-				<section>
-					<TitleSection>Experiencia</TitleSection>
-					<Experience />
-				</section>
+			<main class="lg:w-1/2 lg:py-24">	
+				<Experience />
 				<About />
-				<br>
-				<Proyecto />
+				<Project />
 			</main>
 
 		</div>
