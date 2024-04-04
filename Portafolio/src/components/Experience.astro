@@ -1,8 +1,9 @@
 ---
 import { EXPERIENCE_JOBS } from '../constants/experience.js'
+import Pill from './Pill.astro'
 import TitleSection from './TitleSection.astro'
 ---
-<section>
+<section class="mb-16">
     <TitleSection>Experiencia</TitleSection>
     <div>
         <ol>
@@ -17,8 +18,10 @@ import TitleSection from './TitleSection.astro'
                                     <p class="mb-3 leading-5 font-light">{job.explicacion_cargo}</p>
                                     <ul class="flex flex-wrap">
                                         {
-                                            job.tecnologias.map((tecnologia, i) => (
-                                                <li class="mr-2 mb-2 py-2 px-3 rounded-lg text-xs font-bold bg-[#ffd430] text-[#0e1013]">{tecnologia}</li>
+                                            job.technologies.map((tecnologia, i) => (
+                                                <Pill>
+                                                    {tecnologia}
+                                                </Pill>
                                             ))
                                         }
                                     </ul>
