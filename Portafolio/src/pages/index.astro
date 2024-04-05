@@ -1,13 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro';
-import GithubIcon from '../components/icons/Github.astro';
-import LinkedinIcon from '../components/icons/Linkedin.astro';
-import SocialPill from '../components/SocialPill.astro';
 import Experience from '../components/Experience.astro';
 import About from '../components/About.astro';
 import Project from '../components/Project.astro';
-import TitleSection from '../components/TitleSection.astro';
+import Header from '../components/Header.astro';
 ---
 
 <Layout
@@ -16,49 +12,25 @@ import TitleSection from '../components/TitleSection.astro';
 >
 	<div>
 		<div class="w-full max-w-screen-xl mx-auto min-h-screen px-6 py-12 
-					md:py-20 md:px-12
-					lg:flex lg:px-24 lg:py-0">
-			<header class="mb-28
-						lg:sticky lg:top-0 lg:max-h-screen lg:w-1/2 lg:flex lg:justify-between lg:flex-col lg:py-24">
-				<div class="mb-8 md:mb-0">
-					<h1 class="text-4xl sm:text-5xl font-bold mb-3 text-[#ffef43]">
-						Jose Sissa
-						<div class="flex justify-center items-center">
-							<Badge>Disponible</Badge>
-						</div>
-					</h1>
-					<h2 class="sm:text-xl font-medium">
-						Ingeniero de Sistemas <br>Desarrollador Web
-					</h2>
-				</div>
+				md:py-20 md:px-12
+				lg:flex lg:px-24 lg:py-0">
+			
+			<Header />
 
-				<ul class="flex items-center">
-					<li>
-						<SocialPill href="https://www.linkedin.com/in/josesissamendoza/">
-							<LinkedinIcon class="size-6" />
-						</SocialPill>
-					</li>
-					<li>
-						<SocialPill href="https://github.com/JoseSissa">
-							<GithubIcon class="size-6" />
-						</SocialPill>
-					</li>
-				</ul>
-			</header>
-
-			<main class="lg:w-1/2 lg:py-24">	
+			<main class="lg:w-1/2 lg:py-16">	
 				<Experience />
 				<About />
 				<Project />
+
+				<footer>
+					<div>
+						<p>
+							Footer
+						</p>
+					</div>
+				</footer>
 			</main>
 
-			<footer>
-				<div>
-					<p>
-						Footer
-					</p>
-				</div>
-			</footer>
 
 		</div>
 	</div>
