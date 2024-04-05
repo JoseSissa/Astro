@@ -15,7 +15,10 @@ import TitleSection from './TitleSection.astro'
                                 <header class="mb-2 text-xs font-light">{job.fecha}</header>
                                 <div>
                                     <h3 class="mb-2 font-bold">{job.cargo} en {job.empresa}</h3>
-                                    <p class="mb-3 leading-5 font-light">{job.explicacion_cargo}</p>
+                                    <p class="mb-3 leading-5 font-light
+                                            md:leading-normal">
+                                        {job.explicacion_cargo}
+                                    </p>
                                     <ul class="flex flex-wrap">
                                         {
                                             job.technologies.map((tecnologia, i) => (
