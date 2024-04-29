@@ -62,3 +62,8 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 - [Icons](https://svgl.vercel.app/)
 - [Icons - Option](https://tabler.io/icons)
 - [Generate color palette](https://uicolors.app/create)
+
+## Colors
+Color 1: #FEF265
+Color 1: #fff773
+background: #001423
