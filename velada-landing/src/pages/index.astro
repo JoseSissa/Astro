@@ -1,9 +1,19 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '@/layouts/Layout.astro';
+
+import CountDown from '@/sections/CountDown.astro';
+import Footer from '@/sections/Footer.astro';
+import Hero from '@/sections/Hero.astro';
+import Info from '@/sections/Info.astro';
+import PrincipalDate from '@/sections/PrincipalDate.astro';
 ---
 
 <Layout title="Welcome to Astro.">
+	<Hero />
 	<main>
-		<h1 class="text-white animate-blurred-fade-in">Hola Mundo</h1>
+		<PrincipalDate />
+		<Info />
+		<CountDown />
 	</main>
+	<Footer />
 </Layout>
