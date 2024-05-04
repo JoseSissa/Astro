@@ -1,6 +1,27 @@
 <section class="w-full flex-col justify-center items-center text-center text-primary">
     <h2 class="mb-6 uppercase text-5xl font-semibold">
-        4 de Marzo <span aria-hidden class="hidden md:inline mx-1">.</span><br aria-hidden class="block md:hidden" /> 19:00h CET
+        19 de Octubre 
+        <span aria-hidden class="hidden md:inline mx-1">.</span>
+        <br aria-hidden class="block md:hidden" /> 
+        <span>
+            <script is:inline>
+                const END_DATE = 1729378800000
+                const d = new Date(END_DATE)
+                const date = d.toLocaleTimeString('en-US', {
+                    hour: 'numeric',
+                    minute: 'numeric'
+                })
+
+                // get current timezone
+                const tzOffSet = d.getTimezoneOffset() / 60
+                const dif = tzOffSet * -1
+                const gmt = dif > 0 ? `GMT+${dif}` : `GMT${dif}`
+                console.log(tzOffSet);
+
+                const selfScript = document.currentScript
+                selfScript.parentNode.innerHTML = `${date} ${gmt}` 
+            </script>
+        </span>
     </h2>
     <h3 class="flex flex-col max-w-sm mx-auto mb-8 text-2xl font-medium uppercase">
         <span>
