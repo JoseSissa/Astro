@@ -1,25 +1,28 @@
 ---
 import LaVeladaLogo from "@/icons/la-velada.astro"
 ---
-<section class="flex flex-col justify-center items-center my-32">
+<section class="flex flex-col justify-center items-center my-32 gap-y-10">
     <LaVeladaLogo class="text-primary" />
 
-    <div>
-        <div>
-            <span data-days>00</span>
-            <span>Dias</span>
+    <div class="flex gap-x-1 text-primary uppercase font-semibold">
+        <div class="flex flex-col justify-center items-center w-16 gap-y-2">
+            <span class="text-4xl tabular-nums" data-days>00</span>
+            <span class="text-xs text-center">Dias</span>
         </div>
-        <div>
-            <span data-hours>00</span>
-            <span>Horas</span>
+        <span aria-hidden="true" class="mt-1 text-xl">:</span>
+        <div class="flex flex-col justify-center items-center w-16 gap-y-2">
+            <span class="text-4xl tabular-nums" data-hours>00</span>
+            <span class="text-xs text-center">Horas</span>
         </div>
-        <div>
-            <span data-minutes>00</span>
-            <span>Minutos</span>
+        <span aria-hidden="true" class="mt-1 text-xl">:</span>
+        <div class="flex flex-col justify-center items-center w-16 gap-y-2">
+            <span class="text-4xl tabular-nums" data-minutes>00</span>
+            <span class="text-xs text-center">Minutos</span>
         </div>
-        <div>
-            <span data-seconds>00</span>
-            <span>Segundos</span>
+        <span aria-hidden="true" class="mt-1 text-xl">:</span>
+        <div class="flex flex-col justify-center items-center w-16 gap-y-2">
+            <span class="text-4xl tabular-nums" data-seconds>00</span>
+            <span class="text-xs text-center">Segundos</span>
         </div>
     </div>
 </section>
