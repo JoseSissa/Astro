@@ -1,6 +1,7 @@
 ---
 // Supports weights 100-900
 import '@fontsource-variable/jost';
+import BackgroundNoise from '@/components/BackgroundNoise.astro'
 
 interface Props {
 	title: string;
@@ -13,13 +14,15 @@ const { title } = Astro.props;
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="TODO" />
+		<meta name="description" content="Proyecto de La Velada 4 realizado para fortalecer mis habilidades en el desarrollo web" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="">
 		<title>{title}</title>
 	</head>
 	<body>
-		<div class="max-w-6xl mx-auto px-2 lg:px-10 pt-40">
+		<BackgroundNoise />
+		<div class="max-w-6xl mx-auto px-2 lg:px-10 pt-20 md:pt-32">
 			<slot />
 		</div>
 	</body>
