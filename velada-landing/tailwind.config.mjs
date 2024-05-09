@@ -7,7 +7,8 @@ export default {
 		extend: {
 			colors: {
 				'primary': '#333',
-				'secondary': '#DDD'
+				'secondary': '#DDD',
+				'twitch': '#6441a4'
 			}
 		},
 	},
