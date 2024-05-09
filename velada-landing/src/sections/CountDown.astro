@@ -51,7 +51,9 @@ import LaVeladaLogo from "@/icons/la-velada.astro"
         if(minutes instanceof HTMLElement) minutes.innerText = formatNumber(((END_DATE - Date.now()) % HOUR) / MINUTE)
         if(seconds instanceof HTMLElement) seconds.innerText = formatNumber(((END_DATE - Date.now()) % MINUTE) / SECOND)
     }
-    
+
+    updateCountDown()
     setInterval(updateCountDown, SECOND)
+
     
 </script>
