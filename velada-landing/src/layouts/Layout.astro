@@ -8,16 +8,25 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const descriptioPage = 'Proyecto Académico de La Velada Del Año 2024'
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Proyecto de La Velada 4 realizado para fortalecer mis habilidades en el desarrollo web" />
+		<meta name="description" content={descriptioPage} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="">
+		<meta
+			name="keywords"
+			content="velada, streamers, creadores, Ibai, boxeo, midudev"
+		/>
+		<meta property="og:type" content="website">
+		<meta property="og:title" content={title}>
+		<meta property="og:url" content="https://lavelada.es">
+		<meta property="og:image" content="">
+		<meta property="og:description" content={descriptioPage}>
 		<title>{title}</title>
 	</head>
 	<body>
