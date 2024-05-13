@@ -10,13 +10,13 @@ import TitleSection from './TitleSection.astro'
         PROJECTS.map((project, index) => {
             return (
                     <h3 class="mb-2 font-bold">
-                        <a href={project.demo}>{project.title} <img src="/public/link_icon.svg" class="inline-block w-4 h-4 svg-path invert" alt="Flecha que indica que el texto anterior es un link"></a>
+                        <a href={project.demo}>{project.title} <img src="/link_icon.svg" class="inline-block w-4 h-4 svg-path invert" alt="Flecha que indica que el texto anterior es un link"></a>
                     </h3>
                     <p class="mb-3 leading-5 font-light
                         md:leading-normal">
                         {project.description}
                     </p>
-                    <img class="w-52 mb-3" src="/public/favicon.svg" alt="Icono de Astro">
+                    <img class="w-52 mb-3" src="/favicon.svg" alt="Icono de Astro">
                     <ul class="flex flex-wrap">
                         {
                             project.technologies.map((tecnologia, i) => (
