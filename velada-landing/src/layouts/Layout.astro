@@ -40,9 +40,6 @@ const descriptioPage = 'Proyecto Académico de La Velada Del Año 2024'
 	:root {
 		--color-primary: rgba(12, 12, 12);
 		--color-secondary: rgba(221, 221, 221);
-
-		/* --background-color: --color-primary; */
-		/* --background-image: var(--background-color) url("/concrete.png") repeat; */
 	}
 
 	.dark {
@@ -68,14 +65,16 @@ const descriptioPage = 'Proyecto Académico de La Velada Del Año 2024'
 
 	::-webkit-scrollbar-thumb {
 		border-radius: 10px;
-		background-color: theme("colors.primary");
+		background-color: var(--color-secondary);
 	}
 
 	::-webkit-scrollbar-track {
-		background: var(--background-image);
+		background: url("/noise.png");
+		background-repeat: repeat;
 	}
 
 	::-webkit-scrollbar-corner {
-		background: var(--background-image);
+		background: url("/noise.png");
+		background-repeat: repeat;
 	}
 </style>
