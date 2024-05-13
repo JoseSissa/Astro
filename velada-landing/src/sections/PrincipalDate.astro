@@ -3,25 +3,9 @@
         <time class="date">
             19 de Octubre 
         </time>
-        <span aria-hidden="true" class="hidden md:inline mx-1">.</span>
+        <span aria-hidden="true" class="hidden md:inline md:mb-2 mx-1">·</span>
         <br aria-hidden="true" class="block md:hidden" /> 
-        <time>
-            <script is:inline>
-                const END_DATE = 1729378800000
-                const d = new Date(END_DATE)
-                const date = d.toLocaleTimeString('en-US', {
-                    hour: 'numeric',
-                    minute: 'numeric'
-                })
-
-                // get current timezone
-                const tzOffSet = d.getTimezoneOffset() / 60
-                const dif = tzOffSet * -1
-                const gmt = dif > 0 ? `GMT+${dif}` : `GMT${dif}`
-                const selfScript = document.currentScript
-                selfScript.parentNode.innerHTML = `${date} ${gmt}` 
-            </script>
-        </time>
+        <time id="hour"></time>
     </h2>
     <h3 class="flex flex-col max-w-sm mx-auto mb-8 text-2xl font-medium uppercase">
         <span>
@@ -43,3 +27,21 @@
         ENTRADAS AGOTADAS
     </a>
 </section>
+
+<script>
+    import { END_DATE } from "@/const/const"
+    const d = new Date(END_DATE)
+    const date = d.toLocaleTimeString('en-US', {
+        hour: 'numeric',
+        minute: 'numeric'
+    })
+
+    // get current timezone
+    const tzOffSet = d.getTimezoneOffset() / 60
+    const dif = tzOffSet * -1
+    const gmt = dif > 0 ? `GMT+${dif}` : `GMT${dif}`
+    const selfScript = document.getElementById("hour")
+    if(selfScript != null) {
+        selfScript.innerHTML = `${date} ${gmt}` 
+    }
+</script>
