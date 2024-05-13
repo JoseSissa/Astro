@@ -37,8 +37,31 @@ const descriptioPage = 'Proyecto Académico de La Velada Del Año 2024'
 	</body>
 </html>
 <style is:global>
+	:root {
+		--background-color: #ddd;
+		--background-image: var(--background-color) url("/concrete.png") repeat;
+	}
 	html {
 		font-family: 'Jost Variable', system-ui, sans-serif;
-		background: #ddd;
+		background: var(--background-color);
+		scroll-behavior: smooth;
+	}
+
+	::-webkit-scrollbar {
+		width: 10px;
+		border-radius: 10px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		background-color: theme("colors.primary");
+	}
+
+	::-webkit-scrollbar-track {
+		background: var(--background-image);
+	}
+
+	::-webkit-scrollbar-corner {
+		background: var(--background-image);
 	}
 </style>
