@@ -20,16 +20,19 @@ const { description, title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="leading-5 md:leading-normal">
-		<!-- background gradiente: https://bg.ibelick.com/ -->
-		<!-- <div class="absolute top-0 z-[-2] min-h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div> -->
+	<body class="relative h-full w-full bg-slate-950 leading-5 md:leading-normal">
+		<!-- Background -->
+		<div class="fixed bottom-0 left-[-20%] right-0 top-[-10%] h-[800px] w-[800px] rounded-full lg:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
+		<!-- <div class="fixed bottom-0 right-[-20%] top-[43%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div> -->
+		<!-- Background -->
 		<slot />
 	</body>
 </html>
 <style is:global>
 	:root {
-		--primary-color: #fff200;
-		--secondary-color: #fff773;
+		--primary: #fff200;
+		--secondary: #fff773;
+		--background: #001423;
 	}
 	html {
 		font-family: 'Onest', system-ui, sans-serif;
@@ -37,6 +40,6 @@ const { description, title } = Astro.props;
 	}
 	body {
 		min-height: 100vh;
-		background-color: #001423;
+		/* background-color: var(--background); */
 	}
 </style>
