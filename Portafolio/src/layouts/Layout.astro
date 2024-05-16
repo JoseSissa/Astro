@@ -20,7 +20,7 @@ const { description, title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="leading-5 md:leading-normal">
 		<!-- background gradiente: https://bg.ibelick.com/ -->
 		<!-- <div class="absolute top-0 z-[-2] min-h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div> -->
 		<slot />
@@ -28,7 +28,8 @@ const { description, title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		color-scheme: dark light;
+		--primary-color: #fff200;
+		--secondary-color: #fff773;
 	}
 	html {
 		font-family: 'Onest', system-ui, sans-serif;
@@ -36,8 +37,6 @@ const { description, title } = Astro.props;
 	}
 	body {
 		min-height: 100vh;
-		/* background-color: #0e1013; */
-		/* background-color: #000; */
 		background-color: #001423;
 	}
 </style>
