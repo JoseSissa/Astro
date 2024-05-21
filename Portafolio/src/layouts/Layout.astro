@@ -20,9 +20,9 @@ const { description, title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="relative h-full w-full leading-5 md:leading-normal dark">
+	<body class="relative h-full w-full leading-5 md:leading-normal">
 		<!-- Background -->
-		<div class="fixed bottom-0 left-[-20%] right-0 top-[-10%] h-[800px] w-[800px] rounded-full lg:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
+		<!-- <div class="fixed bottom-0 left-[-20%] right-0 top-[-10%] h-[800px] w-[800px] rounded-full lg:bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div> -->
 		<!-- <div class="fixed bottom-0 right-[-20%] top-[43%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div> -->
 		<!-- Background -->
 		<slot />
@@ -30,20 +30,20 @@ const { description, title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		--yellow-one: hsl(57, 100%, 50%);
-		--yellow-two: #fff773;
-		--background: #020617;
-		--background-two: hsl(206, 100%, 7%);
+		/* --yellow-one: hsl(57, 100%, 50%);
+		--yellow-two: #fff773; */
+		/* --background: #020617; */
+		--background: hsl(206, 100%, 7%);
 		--color-primary: hsl(0, 0%, 87%);
 	}
 
 	.dark {
-		--background: #dddddd;
-		--color-primary: #001423;
+		--background: hsl(0, 0%, 87%);
+		--color-primary: hsl(206, 100%, 7%);
 	}
 	html {
 		font-family: 'Onest', system-ui, sans-serif;
-		background-color: var(--background);
+		background: var(--background);
 		color: var(--color-primary);
 	}
 	body {

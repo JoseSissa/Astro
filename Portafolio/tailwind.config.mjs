@@ -4,10 +4,7 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				yellowOne: '#fff200',
-				yellowTwo: '#fff773',
 				background: 'var(--background)',
-				backgroundTwo: 'var(--background-two)',
 				colorPrimary: 'var(--color-primary)'
 			}
 		}
