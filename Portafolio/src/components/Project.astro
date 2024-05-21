@@ -11,7 +11,8 @@ import TitleSection from './TitleSection.astro'
             return (
                 <article>
                     <h3 class="mb-2 font-bold">
-                        <a href={project.demo}>{project.title}
+                        <a href={project.demo}>
+                            {project.title}
                             <img src="/link_icon.svg" class="inline-block w-4 h-4 svg-path invert" alt="Flecha que indica que el texto anterior es un link">
                         </a>
                     </h3>
@@ -31,6 +32,7 @@ import TitleSection from './TitleSection.astro'
                         }
                     </ul>
                 </article>
-            )})
+            )
+        })
     }
 </section>

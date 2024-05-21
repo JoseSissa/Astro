@@ -4,7 +4,7 @@ export const EXPERIENCE_JOBS = [
 		empresa: 'Gravital',
 		web: 'https://gravital.co/',
 		cargo: 'Desarrollador Frontend',
-		explicacion_cargo: 'Desarrollador Frontend donde una de mis principales funciones era agregar, mejorar y modificar diferentes funciones desde la parte del cliente a la e-commerce Novita Diamonds.',
+		explicacion_cargo: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores culpa ut nisi minus libero vitae ipsa velit reiciendis ex distinctio quidem facilis.',
 		technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Docker']
 	},
 	{
@@ -12,7 +12,7 @@ export const EXPERIENCE_JOBS = [
 		empresa: 'Gravital',
 		web: 'https://gravital.co/',
 		cargo: 'Desarrollador Frontend',
-		explicacion_cargo: 'Desarrollador Frontend donde una de mis principales funciones era agregar, mejorar y modificar diferentes funciones desde la parte del cliente a la e-commerce Novita Diamonds.',
+		explicacion_cargo: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores culpa ut nisi minus libero vitae ipsa velit reiciendis ex distinctio quidem facilis.',
 		technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Docker']
 	},
 	{
@@ -20,7 +20,7 @@ export const EXPERIENCE_JOBS = [
 		empresa: 'Gravital',
 		web: 'https://gravital.co/',
 		cargo: 'Desarrollador Frontend',
-		explicacion_cargo: 'Desarrollador Frontend donde una de mis principales funciones era agregar, mejorar y modificar diferentes funciones desde la parte del cliente a la e-commerce Novita Diamonds.',
+		explicacion_cargo: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores culpa ut nisi minus libero vitae ipsa velit reiciendis ex distinctio quidem facilis.',
 		technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Docker']
 	},
 	{
@@ -28,7 +28,7 @@ export const EXPERIENCE_JOBS = [
 		empresa: 'Gravital',
 		web: 'https://gravital.co/',
 		cargo: 'Desarrollador Frontend',
-		explicacion_cargo: 'Desarrollador Frontend donde una de mis principales funciones era agregar, mejorar y modificar diferentes funciones desde la parte del cliente a la e-commerce Novita Diamonds.',
+		explicacion_cargo: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores culpa ut nisi minus libero vitae ipsa velit reiciendis ex distinctio quidem facilis.',
 		technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Docker']
 	}
 ]

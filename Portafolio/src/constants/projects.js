@@ -1,7 +1,7 @@
 export const PROJECTS = [
 	{
 		title: 'Portafolio',
-		description: 'Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.',
+		description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores culpa ut nisi minus libero vitae ipsa velit reiciendis.',
 		image: 'Desarrollador Frontend',
         image_src: 'Descripción de la imagen',
 		demo: '',
@@ -9,7 +9,7 @@ export const PROJECTS = [
 	},
 	{
 		title: 'Portafolio',
-		description: 'Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.',
+		description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores culpa ut nisi minus libero vitae ipsa velit reiciendis.',
 		image: 'Desarrollador Frontend',
         image_src: 'Descripción de la imagen',
 		demo: '',
@@ -17,7 +17,7 @@ export const PROJECTS = [
 	},
 	{
 		title: 'Portafolio',
-		description: 'Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.',
+		description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores culpa ut nisi minus libero vitae ipsa velit reiciendis.',
 		image: 'Desarrollador Frontend',
         image_src: 'Descripción de la imagen',
 		demo: '',
@@ -25,7 +25,7 @@ export const PROJECTS = [
 	},
 	{
 		title: 'Portafolio',
-		description: 'Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.',
+		description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores culpa ut nisi minus libero vitae ipsa velit reiciendis.',
 		image: 'Desarrollador Frontend',
         image_src: 'Descripción de la imagen',
 		demo: '',
