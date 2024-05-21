@@ -1,13 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	darkMode: 'class',
 	theme: {
 		extend: {
 			colors: {
-				'primary': '#fff200',
-				'secondary': '#fff773',
-				'background': '#001423'
+				yellowOne: '#fff200',
+				yellowTwo: '#fff773',
+				background: 'var(--background)',
+				backgroundTwo: 'var(--background-two)',
+				colorPrimary: 'var(--color-primary)'
 			}
 		}
 	},
