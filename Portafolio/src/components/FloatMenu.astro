@@ -1,0 +1,50 @@
+---
+import HomeIcon from "./icons/HomeIcon.astro";
+import WorkIcon from "./icons/WorkIcon.astro";
+import ProjectIcon from "./icons/ProjectIcon.astro";
+import ProfileIcon from "./icons/ProfileIcon.astro";
+import SunIcon from "./icons/SunIcon.astro";
+import MoonIcon from "./icons/MoonIcon.astro";
+---
+
+<nav class={`
+    fixed bottom-10 left-0 w-full h-10 z-10
+    lg:hidden
+`}>
+    <ul class="flex gap-x-3 max-w-max h-full mx-auto px-1 rounded-full bg-colorPrimary ">
+        <li>
+            <a href="#home" class="flex justify-center items-center h-full px-3">
+                <HomeIcon class="w-6 h-6" />
+            </a>
+        </li>
+        <li>
+            <a href="#experience" class="flex justify-center items-center h-full px-3">
+                <WorkIcon class="w-6 h-6" />
+            </a>
+        </li>
+        <li>
+            <a href="#proyects" class="flex justify-center items-center h-full px-3">
+                <ProjectIcon class="w-6 h-6" />
+            </a>
+        </li>
+        <li>
+            <a href="#about" class="flex justify-center items-center h-full px-3">
+                <ProfileIcon class="w-6 h-6" />
+            </a>
+        </li>
+        <span class="my-2 border" aria-hidden="true"></span>
+        <li>
+            <button class="flex justify-center items-center h-full px-3" id="darkMode">
+                <SunIcon class="w-6 h-6" />
+                <!-- <MoonIcon class="w-6 h-6" /> -->
+            </button>
+        </li>
+    </ul>
+</nav>
+
+<script>
+    const darkMode = document.getElementById("darkMode")
+    darkMode.addEventListener('click', (e) => {
+        console.log(e);
+    })
+</script>
