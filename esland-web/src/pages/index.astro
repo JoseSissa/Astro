@@ -1,14 +1,23 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from '@/layouts/Layout.astro';
+import Video from '@/components/Video.astro';
+import Intro from '@/components/Intro.astro';
+import PreFooter from "@/components/PreFooter.astro"
+import Footer from '@/components/Footer.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout
+	title="Premios ESLAND 2024 - Página didáctica"
+	description="Página web creada para fortalecer mis habilidades de desarrollo web, siguiendo el curso/video de Midudev."
+>
+	<Video />
 	<main>
-		
+		<Intro />
+		<PreFooter />
 	</main>
+	<Footer />
 </Layout>
 
 <style>
-	
+
 </style>
