@@ -11,7 +11,7 @@ const { description, title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="backgroundTransition">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
@@ -41,10 +41,18 @@ const { description, title } = Astro.props;
 		--background: hsl(206, 100%, 7%);
 		--color-primary: hsl(0, 0%, 87%);
 	}
+
+	.backgroundTransition {
+		transition-property: background-color, border-color, text-decoration-color, fill, stroke;
+    	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    	transition-duration: 300ms;
+	}
+
 	html {
 		font-family: 'Onest', system-ui, sans-serif;
 		background: var(--background);
 		color: var(--color-primary);
+		scroll-behavior: smooth;
 	}
 	body {
 		min-height: 100vh;
