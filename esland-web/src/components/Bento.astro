@@ -1,0 +1,73 @@
+---
+import BentoItem from "./BentoItem.astro";
+---
+
+<section
+  class={`
+        w-full max-w-[1400px]
+        grid grid-cols-10 auto-rows-[30rem] gap-4
+        mx-auto p-20
+    `}
+>
+    <BentoItem class="col-span-10 md:col-span-4" title="ANDORRA: EL CÉNIT DE LOS PREMIOS ESLAND">
+        <div
+            slot="image"
+            class="background-one bg-blue-950 opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+            style=""
+        ></div>
+        <p slot="content" class="max-w-3xl">
+            Una nueva edición <strong>cargada de novedades</strong> y contenido, que empezará varias semanas antes de la ansiada gala. <strong>Directos especiales, colaboraciones, conciertos y mucho más</strong> en lo que será una auténtica fiesta dedicada a la creación de contenido.
+        </p>
+    </BentoItem>
+
+    <BentoItem
+        class="col-span-10 md:col-span-6"
+        title="LA ALFOMBRA BLANCA"
+        subtitle="16 de febrero de 2024"
+    >
+        <div
+            slot="image"
+            class="background-one bg-blue-950 opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+            style=""
+        ></div>
+    </BentoItem>
+    <BentoItem
+        class="col-span-10 md:col-span-6"
+        title="LA GALA"
+        subtitle="17 de febrero de 2024"
+    >
+        <div
+            slot="image"
+            class="background-one bg-blue-950 opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+            style=""
+        ></div>
+    </BentoItem>
+    <BentoItem
+        class="col-span-10 md:col-span-4"
+        title="DISFRUTA DEL REDDIT DE LA COMUNIDAD"
+    >
+        <div
+            slot="image"
+            class="background-one bg-blue-950 opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+            style=""
+        ></div>
+    </BentoItem>
+</section>
+
+<style>
+    .background-one {
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/public/images/bento-grid/mountain.webp');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        object-fit: cover;
+        object-position: center;
+        z-index: 0;
+    }
+</style>
