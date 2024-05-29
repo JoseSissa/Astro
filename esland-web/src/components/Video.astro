@@ -1,8 +1,15 @@
+---
+// Internacionalización
+import { geti18n } from '@/i18n';
+const { currentLocale } = Astro
+const i18n = geti18n({ currentLocale })
+---
+
 <section class="relative w-full">
     <img
         class="absolute top-10 left-0 right-0 w-[1000px] mx-auto z-10 animate-fade-in-up"
         src="/public/logo-esland-home.svg" 
-        alt="Premios a la comunidad hispanohablante"
+        alt={i18n.HERO_SUBTITLE}
     >
     <video 
         class="w-full h-auto animate-fade-in animate-duration-1000 animate-ease-in-out"

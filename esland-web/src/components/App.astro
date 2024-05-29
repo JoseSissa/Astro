@@ -6,8 +6,8 @@ import PreFooter from "@/components/PreFooter.astro"
 import Footer from '@/components/Footer.astro';
 import Bento from '@/components/Bento.astro';
 
+// Internacionalización
 import { geti18n } from '@/i18n';
-
 const { currentLocale } = Astro
 const i18n = geti18n({ currentLocale })
 ---
@@ -24,7 +24,3 @@ const i18n = geti18n({ currentLocale })
 	</main>
 	<Footer />
 </Layout>
-
-<script>
-    
-</script>

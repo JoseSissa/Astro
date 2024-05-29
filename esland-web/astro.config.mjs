@@ -9,7 +9,7 @@ export default defineConfig({
     // Idioma por defecto
     defaultLocale: 'es',
     // Los idiomas soportados
-    locales: ['es', 'ca'],
+    locales: ['es', 'ca', 'en'],
     // Enrutamiento de los idiomas
     routing: {
       // El idioma por defecto ES, y poner la sgte propiedad en false, evitamos que nos ponga el URL/es en la ruta

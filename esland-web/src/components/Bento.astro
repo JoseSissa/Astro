@@ -1,5 +1,10 @@
 ---
 import BentoItem from "./BentoItem.astro";
+
+// Internacionalización
+import { geti18n } from '@/i18n';
+const { currentLocale } = Astro
+const i18n = geti18n({ currentLocale })
 ---
 
 <section
@@ -9,21 +14,19 @@ import BentoItem from "./BentoItem.astro";
         mx-auto p-20
     `}
 >
-    <BentoItem class="col-span-10 md:col-span-4" title="ANDORRA: EL CÉNIT DE LOS PREMIOS ESLAND">
+    <BentoItem class="col-span-10 md:col-span-4" title={i18n.BENTO_TITLE_1}>
         <div
             slot="image"
             class="background-one bg-blue-950 ease-in-out group-hover:scale-110"
             style="background-image: url('/public/images/bento-grid/mountain.webp')"
         ></div>
-        <p slot="content" class="max-w-3xl">
-            Una nueva edición <strong>cargada de novedades</strong> y contenido, que empezará varias semanas antes de la ansiada gala. <strong>Directos especiales, colaboraciones, conciertos y mucho más</strong> en lo que será una auténtica fiesta dedicada a la creación de contenido.
-        </p>
+        <p slot="content" class="max-w-3xl" set:html={i18n.BENTO_CONTENT_1}></p>
     </BentoItem>
 
     <BentoItem
         class="col-span-10 md:col-span-6"
-        title="LA ALFOMBRA BLANCA"
-        subtitle="16 de febrero de 2024"
+        title={i18n.BENTO_TITLE_2}
+        subtitle={i18n.BENTO_SUBTITLE_2}
     >
         <div
             slot="image"
@@ -33,8 +36,8 @@ import BentoItem from "./BentoItem.astro";
     </BentoItem>
     <BentoItem
         class="col-span-10 md:col-span-6"
-        title="LA GALA"
-        subtitle="17 de febrero de 2024"
+        title={i18n.BENTO_TITLE_3}
+        subtitle={i18n.BENTO_SUBTITLE_3}
     >
         <div
             slot="image"
@@ -44,7 +47,7 @@ import BentoItem from "./BentoItem.astro";
     </BentoItem>
     <BentoItem
         class="col-span-10 md:col-span-4"
-        title="DISFRUTA DEL REDDIT DE LA COMUNIDAD"
+        title={i18n.BENTO_TITLE_4}
     >
         <div
             slot="image"
