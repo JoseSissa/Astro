@@ -12,7 +12,7 @@ import BentoItem from "./BentoItem.astro";
     <BentoItem class="col-span-10 md:col-span-4" title="ANDORRA: EL CÉNIT DE LOS PREMIOS ESLAND">
         <div
             slot="image"
-            class="background-one bg-blue-950 opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+            class="background-one bg-blue-950 ease-in-out group-hover:scale-110"
             style="background-image: url('/public/images/bento-grid/mountain.webp')"
         ></div>
         <p slot="content" class="max-w-3xl">
@@ -27,7 +27,7 @@ import BentoItem from "./BentoItem.astro";
     >
         <div
             slot="image"
-            class="background-one bg-blue-500 opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+            class="background-one bg-blue-500 ease-in-out group-hover:scale-110"
             style="background-image: url('/public/images/bento-grid/grefg.webp')"
         ></div>
     </BentoItem>
@@ -38,7 +38,7 @@ import BentoItem from "./BentoItem.astro";
     >
         <div
             slot="image"
-            class="background-one bg-blue-500 opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+            class="background-one bg-blue-500 ease-in-out group-hover:scale-110"
             style="background-image: url('/public/images/bento-grid/pistas.webp')"
         ></div>
     </BentoItem>
@@ -48,7 +48,7 @@ import BentoItem from "./BentoItem.astro";
     >
         <div
             slot="image"
-            class="background-one bg-blue-950 opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+            class="background-one bg-blue-950 ease-in-out group-hover:scale-110"
             style="background-image: url('/public/images/bento-grid/laptop.webp')"
         ></div>
     </BentoItem>
@@ -68,5 +68,8 @@ import BentoItem from "./BentoItem.astro";
         object-fit: cover;
         object-position: center;
         z-index: 0;
+        opacity: 0.9;
+        background-blend-mode: luminosity;
+        transition-duration: 1000ms;
     }
 </style>
