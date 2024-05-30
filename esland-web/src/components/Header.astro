@@ -1,5 +1,10 @@
 ---
 import Logo from "./icons/Logo.astro";
+
+// Internacionalización
+import { geti18n } from '@/i18n';
+const { currentLocale } = Astro
+const i18n = geti18n({ currentLocale })
 ---
 
 <header id="header-nav" class="fixed top-0 w-full py-4 px-8 lg:px-0 z-20">
@@ -10,13 +15,13 @@ import Logo from "./icons/Logo.astro";
         <nav class="justify-self-center w-2/4">
             <ul class="flex justify-center items-center gap-4">
                 <li>
-                    <a href="#">INFO</a>
+                    <a href="#">{i18n.HEADER_INFO}</a>
                 </li>
                 <li>
-                    <a href="#">ARCHIVO</a>
+                    <a href="#">{i18n.HEADER_ARCHIVE}</a>
                 </li>
             </ul>
         </nav>
-        <a href="#" class="lg:w-1/4 text-end">ESLAND: EL DOCUMENTAL</a>
+        <a href="#" class="lg:w-1/4 text-end">{i18n.HEADER_BUTTON}</a>
     </div>
 </header>
