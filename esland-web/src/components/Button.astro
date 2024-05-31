@@ -1,0 +1,29 @@
+---
+interface Props {
+    styles: string
+    href: string
+}
+
+const { styles, href } = Astro.props
+
+---
+<a 
+    class=`px-4 py-2 border rounded-3xl font-medium cursor-pointer uppercase ${styles}`
+    href={href}
+    rel="noopener noreferrer"
+    target="_blank"
+>
+    <slot />
+</a>
+
+<style>
+    a {
+        transition-property: box-shadow, text-shadow;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+    }
+    a:hover {
+        box-shadow: 0 0 10px 0 rgb(255 255 255 / 1);
+        text-shadow: 0 0 10px rgb(255 255 255 / 1);
+    }
+</style>
