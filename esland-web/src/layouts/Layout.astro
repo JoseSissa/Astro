@@ -1,6 +1,7 @@
 ---
 // Supports weights 100-900
 import '@fontsource-variable/onest';
+import { ViewTransitions } from 'astro:transitions';
 import Header from '../components/Header.astro';
 interface Props {
 	title: string;
@@ -19,6 +20,7 @@ const { currentLocale } = Astro
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
 	<body>
 		<Header />
@@ -69,5 +71,9 @@ const { currentLocale } = Astro
 			-webkit-backdrop-filter: blur(8px);
 			backdrop-filter: blur(8px);
 		}
+	}
+
+	.cv-p {
+		clip-path: polygon(50% 100%, 100% 85%, 100% 0, 0 0, 0 85%);
 	}
 </style>
