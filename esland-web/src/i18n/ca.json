@@ -304,6 +304,7 @@
 	"GALLERY": {
 		"TITLE": "GALERIA",
 		"TEXT": "Alguns dels millors moments de la gala que passaran a la història.",
+		"ALT": "Fotografia dels premis ESLAND",
 		"LOAD_MORE": "Veure Més"
 	},
 	"LEGAL_NOTICE": {

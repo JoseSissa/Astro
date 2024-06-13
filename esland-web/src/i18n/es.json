@@ -304,6 +304,7 @@
 	"GALLERY": {
 		"TITLE": "GALERÍA",
 		"TEXT": "Algunos de los mejores momentos de la gala que pasarán a la historia.",
+		"ALT": "Fotografía de los premios ESLAND",
 		"LOAD_MORE": "Ver Más"
 	},
 	"LEGAL_NOTICE": {

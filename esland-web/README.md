@@ -58,10 +58,11 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 
 # TOOLS:
 
-| Name                                         | URL                                              |
-| :-------------------------                   | :----------------------------------------------- |
-| `CLIP PATH    `                              | https://bennettfeely.com/clippy/                 |
-| `Reducir tamaño/Optimizar videos de Youtube` | https://github.com/justinribeiro/lite-youtube    |
-| `Icons SVG    `                              | https://svgl.app/                                |
-| `Gallery Option 1     `                      | https://www.lightgalleryjs.com/                  |
-| `Gallery Option 2     `                      | https://photoswipe.com/                          |
+| Name                                         | URL                                                   |
+| :-------------------------                   | :-----------------------------------------------      |
+| `CLIP PATH    `                              | https://bennettfeely.com/clippy/                      |
+| `Reducir tamaño/Optimizar videos de Youtube` | https://github.com/justinribeiro/lite-youtube         |
+| `Icons SVG    `                              | https://svgl.app/                                     |
+| `Gallery Option 1     `                      | https://www.lightgalleryjs.com/                       |
+| `Gallery Option 2     `                      | https://photoswipe.com/                               |
+| `Masonry Layaout      `                      | https://www.npmjs.com/package/@appnest/masonry-layout |
