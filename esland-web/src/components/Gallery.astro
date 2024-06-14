@@ -31,7 +31,7 @@ const i18n = geti18n({ currentLocale })
                     data-pswp-width={width}
                     data-pswp-height={height}
                     >
-                        <img src={`/public/images/gallery/Velada/img-${i+1}.webp`} alt={i18n.GALLERY.ALT} loading="lazy"></img>
+                        <img src={`/public/images/gallery/Velada-thumbnail/img-${i+1}.webp`} alt={i18n.GALLERY.ALT} loading="lazy"></img>
                     </a>
                 )
             })
@@ -81,7 +81,7 @@ const i18n = geti18n({ currentLocale })
             a.setAttribute('data-pswp-height', photoInfo[0][i].height.toString());
 
             const img = document.createElement('img');
-            img.src = `/public/images/gallery/Velada/img-${i + 1}.webp`;
+            img.src = `/public/images/gallery/Velada-thumbnail/img-${i + 1}.webp`;
             img.alt = `${i18n.GALLERY.ALT}`;
             img.loading = "lazy";
 
