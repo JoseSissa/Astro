@@ -26,12 +26,12 @@ const i18n = geti18n({ currentLocale })
             photos.map(({ height, width }, i) => {
                 return (
                     <a
-                    href={`/public/images/gallery/Velada/img-${i+1}.webp`}
+                    href={`/images/gallery/Velada/img-${i+1}.webp`}
                     target="_blank" 
                     data-pswp-width={width}
                     data-pswp-height={height}
                     >
-                        <img src={`/public/images/gallery/Velada-thumbnail/img-${i+1}.webp`} alt={i18n.GALLERY.ALT} loading="lazy"></img>
+                        <img src={`/images/gallery/Velada-thumbnail/img-${i+1}.webp`} alt={i18n.GALLERY.ALT} loading="lazy"></img>
                     </a>
                 )
             })
@@ -75,13 +75,13 @@ const i18n = geti18n({ currentLocale })
 
         for (let i = numPhotos; i < until; i++) {
             const a = document.createElement('a');
-            a.href = `/public/images/gallery/Velada/img-${i + 1}.webp`;
+            a.href = `/images/gallery/Velada/img-${i + 1}.webp`;
             a.target = '_blank';
             a.setAttribute('data-pswp-width', photoInfo[0][i].width.toString());
             a.setAttribute('data-pswp-height', photoInfo[0][i].height.toString());
 
             const img = document.createElement('img');
-            img.src = `/public/images/gallery/Velada-thumbnail/img-${i + 1}.webp`;
+            img.src = `/images/gallery/Velada-thumbnail/img-${i + 1}.webp`;
             img.alt = `${i18n.GALLERY.ALT}`;
             img.loading = "lazy";
 
