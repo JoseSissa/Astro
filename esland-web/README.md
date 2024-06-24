@@ -66,3 +66,4 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 | `Gallery Option 1     `                      | https://www.lightgalleryjs.com/                       |
 | `Gallery Option 2     `                      | https://photoswipe.com/                               |
 | `Masonry Layaout      `                      | https://www.npmjs.com/package/@appnest/masonry-layout |
+| `Autentificación      `                      | https://github.com/nowaythatworked/auth-astro         |
