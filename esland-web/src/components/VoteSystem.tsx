@@ -46,19 +46,21 @@ export function VoteSystem() {
 
     const handleVote = ({ categoria, candidato }: { categoria: number; candidato: number;}) => {
         const votesCategory = votes[categoria];
-        console.log('votesCategory');
-        console.log(votesCategory);
-        console.log('categoria', categoria);
-        console.log('candidato', candidato);
         
-        // Comprobrar si ha votado, si es así entonces removerlo
+        // Comprobrar si ha votado, si es así entonces remover el candidato
         if (votesCategory.includes(candidato)) {
             const newVotes = votesCategory.filter((candidatoInArray) => candidatoInArray !== candidato)
             setVotes(prevVotes => prevVotes.with(categoria, newVotes))
             return
         }
-        // Comprobar si ha votado en esta categoería 4 veces
-        if (votesCategory.length >= 4) return;
+        // Comprobar si ha votado en esta categoería 4 veces entonces no le permite agregar un nuevo candidato
+        // if (votesCategory.length >= 4) return;
+
+        // Comprobar si ha votado en esta categoería 4 veces, si selecciona un 5to candidato, elimina el primero seleccionado y agrega el último al final
+        if (votesCategory.length >= 4) {
+            setVotes(prevVotes => prevVotes.with(categoria, [...votesCategory.slice(1), candidato]));
+            return
+        };
         // Agregar un voto
         setVotes(prevVotes => prevVotes.with(categoria, [...votesCategory, candidato]))
     };
