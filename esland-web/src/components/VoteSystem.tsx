@@ -13,14 +13,17 @@ interface Candidate {
 type typeVotes = Array<Array<number>>;
 
 const MAX_CATEGORY = 12;
+const MAX_VOTES_CATEGORY = 4
 
 export function VoteSystem() {
     const [pageInfo, setPageInfo] = useState<pageInfo>();
     const [category, setCategory] = useState(0);
     // Nos crea el estado que será un array con una logitud MAX_CATEGORY y donde cada elemento es un array vacío
+    // La categoria define la posición del array y cada posición puede tener hasta 4 candidatos
+    // [[candidatos], [candidatos]]
     const [votes, setVotes] = useState<typeVotes>(
         Array.from({ length: MAX_CATEGORY }, () => [])
-    );
+    );    
 
     useEffect(() => {
         async function fetchCandidates() {
@@ -41,27 +44,53 @@ export function VoteSystem() {
         setCategory(categoryIndex);
     };
 
+    const handleVote = ({ categoria, candidato }: { categoria: number; candidato: number;}) => {
+        const votesCategory = votes[categoria];
+        console.log('votesCategory');
+        console.log(votesCategory);
+        console.log('categoria', categoria);
+        console.log('candidato', candidato);
+        
+        // Comprobrar si ha votado, si es así entonces removerlo
+        if (votesCategory.includes(candidato)) {
+            const newVotes = votesCategory.filter((candidatoInArray) => candidatoInArray !== candidato)
+            setVotes(prevVotes => prevVotes.with(categoria, newVotes))
+            return
+        }
+        // Comprobar si ha votado en esta categoería 4 veces
+        if (votesCategory.length >= 4) return;
+        // Agregar un voto
+        setVotes(prevVotes => prevVotes.with(categoria, [...votesCategory, candidato]))
+    };
+
     const { categoria = "", candidatos } = pageInfo ?? {};
+    const votesCategory = votes[category]
 
     return (
         <div class="absolute w-full h-full flex flex-col justify-center items-center">
             <CategorySystem>{categoria}</CategorySystem>
             <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
                 {candidatos?.map((candidato, i) => {
+                    const isVoted = votesCategory.includes(candidatos.indexOf(candidato))
                     return (
-                        <li>
-                            <a href={candidato.enlace} target="_blank">
+                        <li class={`${isVoted ? 'bg-yellow-500' : 'bg-blue-900'} p-1 hover:bg-sky-500 transition-colors text-center`}>
+                            {/* <a href={candidato.enlace} target="_blank"> */}
+                            <button onClick={() => handleVote({ categoria: category, candidato: i})}>
                                 <img
                                     src={`/images/voting-assets/${candidato.imagen}`}
                                     alt={candidato.nombre}
-                                />
+                                    />
                                 <p>{candidato.nombre}</p>
-                            </a>
+                            </button>
+                            {/* </a> */}
                         </li>
                     );
                 })}
             </ul>
             <footer>
+                <div>
+                    Votos realizados: {votesCategory.length}/{MAX_VOTES_CATEGORY}
+                </div>
                 <button onClick={() => handleNavigation(category - 1)}>
                     <Arrow rotate />
                 </button>
@@ -98,3 +127,4 @@ function Arrow({ rotate }: { rotate?: boolean }) {
         </svg>
     );
 }
+ 
