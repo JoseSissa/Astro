@@ -27,13 +27,13 @@
         dark: {
             background: 0x666666,
             light: 0xffffff,
-            opacity: 0.3
+            opacity: 0.3,
         },
         light: {
             background: 0xeeeeee,
             light: 0xffffff,
-            opacity: 0.3
-        }
+            opacity: 0.3,
+        },
     } as const;
 
     const themePreference = window.getThemePreference();
@@ -101,7 +101,7 @@
         requestAnimationFrame(animate);
 
         smokeParticles.forEach((particle) => {
-            particle.rotation.z += 0.002;
+            particle.rotation.z += 0.0019;
         });
 
         renderer.render(scene, camera);
@@ -116,9 +116,9 @@
         light.color.setHex(currentTheme.light);
 
         smokeParticles.forEach((particle) => {
-            const smokeMaterial = particle.material as THREE.MeshLambertMaterial;
+            const smokeMaterial =
+                particle.material as THREE.MeshLambertMaterial;
             smokeMaterial.opacity = currentTheme.opacity;
         });
-
     });
 </script>
