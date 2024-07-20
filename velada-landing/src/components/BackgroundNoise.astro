@@ -1,24 +1,25 @@
-<div class={`
+<div
+    class={`
     fixed -top-1/2 -left-1/2 -bottom-1/2 -right-1/2
     w-[200%] h-[200vh] z-[99999]
     pointer-events-none contrast-125 brightness-150
-`}>
-
+`}
+>
 </div>
 
 <style>
     div {
-        background: url('/public/noise.png');
+        background: url("/images/background/noise.png");
         background-repeat: repeat;
         background-color: transparent;
-        animation: noise .5s infinite;
+        animation: noise 0.5s infinite;
         mix-blend-mode: multiply;
     }
 
     @media (prefers-reduced-motion: reduce) {
         div {
             animation: none;
-            opacity: .3;
+            opacity: 0.3;
         }
     }
 
