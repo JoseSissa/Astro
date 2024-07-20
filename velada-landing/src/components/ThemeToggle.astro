@@ -1,52 +1,48 @@
 ---
-import MoonIcon from "@/icons/moonIcon.astro"
-import SunIcon from "@/icons/sunIcon.astro"
+import MoonIcon from "@/icons/moonIcon.astro";
+import SunIcon from "@/icons/sunIcon.astro";
 ---
 
-<button id="themeToggle" class="hover:scale-125 hover:opacity-70 transition inline-block size-12 text-primary/80">
-    <MoonIcon dataType={{'data-moon':''}} class={"hidden"} />
-    <SunIcon dataType={{'data-sun':''}} class={"hidden"} />
+<button
+    id="themeToggle"
+    class="hover:scale-125 hover:opacity-70 transition inline-block size-12 text-primary/80"
+>
+    <MoonIcon dataType={{ "data-moon": "" }} class={"hidden"} />
+    <SunIcon dataType={{ "data-sun": "" }} class={"hidden"} />
     <span class="sr-only">Toggle theme</span>
 </button>
 
 <script is:inline>
-    const moonComponent = document.querySelector('[data-moon]');
-    const sunComponent = document.querySelector('[data-sun]');
-    
-    const getThemePreference = () => {
-        if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
-            return localStorage.getItem("theme")
-        }
-        return window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light"
-    }
-
-    const isDark = getThemePreference() === "dark"
-    document.documentElement.classList[isDark ? "add" : "remove"]("dark")
-    isDark 
-        ? moonComponent.classList.replace("hidden", "block")
-        : sunComponent.classList.replace("hidden", "block")
-    
-
+    const moonComponent = document.querySelector("[data-moon]");
+    const sunComponent = document.querySelector("[data-sun]");
+    // Define cuál de los íconos se debe mostrar
+    window.getThemePreference() === "dark"
+        ? sunComponent.classList.replace("hidden", "block")
+        : moonComponent.classList.replace("hidden", "block");
 
     const handleToggleClick = (e) => {
-        const element = document.documentElement
-        const isDark = element.classList.contains("dark")
+        // window.dispatchEvent(new Event("theme-changed"));
+        const isDark = window.getThemePreference() === "dark";
 
-        if(isDark) {
-            moonComponent.classList.replace("block", "hidden")
-            sunComponent.classList.replace("hidden", "block")
+        localStorage.setItem("theme", isDark ? "light" : "dark");
+
+        if (!isDark) {
+            moonComponent.classList.replace("block", "hidden");
+            sunComponent.classList.replace("hidden", "block");
         } else {
-            moonComponent.classList.replace("hidden", "block")
-            sunComponent.classList.replace("block", "hidden")
+            moonComponent.classList.replace("hidden", "block");
+            sunComponent.classList.replace("block", "hidden");
         }
 
-        element.classList.toggle("dark")        
-        localStorage.setItem("theme", isDark ? "dark" : "light")
+        document.documentElement.classList.toggle("dark", !isDark)
+    };
+    function createEvent() {
+        // window.dispatchEvent(new Event("theme-changed"));
     }
 
     document
         .getElementById("themeToggle")
-        .addEventListener("click", handleToggleClick)
+        .addEventListener("click", handleToggleClick);
+
+    // createEvent();
 </script>
