@@ -21,7 +21,7 @@ import SunIcon from "@/icons/sunIcon.astro";
         : moonComponent.classList.replace("hidden", "block");
 
     const handleToggleClick = (e) => {
-        // window.dispatchEvent(new Event("theme-changed"));
+        window.dispatchEvent(new Event("theme-changed"));
         const isDark = window.getThemePreference() === "dark";
 
         localStorage.setItem("theme", isDark ? "light" : "dark");
@@ -37,12 +37,12 @@ import SunIcon from "@/icons/sunIcon.astro";
         document.documentElement.classList.toggle("dark", !isDark)
     };
     function createEvent() {
-        // window.dispatchEvent(new Event("theme-changed"));
+        window.dispatchEvent(new Event("theme-changed"));
     }
 
     document
         .getElementById("themeToggle")
         .addEventListener("click", handleToggleClick);
 
-    // createEvent();
+    createEvent();
 </script>
