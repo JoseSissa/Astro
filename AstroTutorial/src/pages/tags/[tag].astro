@@ -1,20 +1,39 @@
 ---
+import BlogPost from "../../components/BlogPost.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
+// Si necesitas información para construir las rutas de la página, escríbela dentro de getStaticPaths().
+// Para recibir información en la plantilla HTML de una ruta de página, escríbela fuera de getStaticPaths().
+
 export async function getStaticPaths() {
+    const allPosts = await Astro.glob("../posts/*.md");
+
     return [
-        { params: { tag: "astro" } },
-        { params: { tag: "éxitos" } },
-        { params: { tag: "comunidad" } },
-        { params: { tag: "bloguear" } },
-        { params: { tag: "contratiempos" } },
-        { params: { tag: "aprender en público" } },
+        { params: { tag: "astro" }, props: { posts: allPosts } },
+        { params: { tag: "éxitos" }, props: { posts: allPosts } },
+        { params: { tag: "comunidad" }, props: { posts: allPosts } },
+        { params: { tag: "bloguear" }, props: { posts: allPosts } },
+        { params: { tag: "contratiempos" }, props: { posts: allPosts } },
+        { params: { tag: "aprender en público" }, props: { posts: allPosts } },
     ];
 }
 
 const { tag } = Astro.params;
+const { posts } = Astro.props;
+
+const filteredPosts = posts.filter((post) =>
+    post.frontmatter.tags?.includes(tag)
+);
 ---
 
 <BaseLayout pageTitle={tag}>
     <p>Entradas etiquetadas con {tag}</p>
+
+    <ul>
+        {
+            filteredPosts?.map((post) => (
+                <BlogPost title={post.frontmatter.title} url={post.url} />
+            ))
+        }
+    </ul>
 </BaseLayout>
